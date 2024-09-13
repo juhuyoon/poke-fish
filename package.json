@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "install": "cd server && npm i && cd ../client && npm i",
+    "start": "node server/server.js",
+    "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@apollo/server": "^4.11.0",
-    "graphql": "^16.9.0"
+  "devDependencies": {
+    "concurrently": "^9.0.1"
   }
 }
