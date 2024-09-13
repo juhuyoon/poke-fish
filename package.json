@@ -7,6 +7,8 @@
     "install": "cd server && npm i && cd ../client && npm i",
     "start": "node server/server.js",
     "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
+    "build": "cd client && npm run build",
+    "render-build": "npm install & npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
