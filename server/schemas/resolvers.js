@@ -1,4 +1,4 @@
-const { Food } = require('../models/Food');
+const { Food } = require('../models/');
 
 const resolvers = {
   Query: {
@@ -6,8 +6,9 @@ const resolvers = {
       return Food.find({});
     }
   },
+  
   Mutation: {
-    addFood: async (parent, { name, description, price }) => {
+    addFood: async (parent, { name, description }) => {
       console.log(name);
       console.log(description);
       return Food.create({ name, description});

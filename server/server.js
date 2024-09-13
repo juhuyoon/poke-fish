@@ -3,6 +3,7 @@ const path = require('path');
 const { ApolloServer } = require('@apollo/server');
 const { expressMiddleware } = require('@apollo/server/express4');
 
+const db = require('./config/connection');
 // we need to create and CONNECT our typeDefs and Resolvers
 const { typeDefs, resolvers } = require('./schemas');
 
@@ -11,10 +12,6 @@ const server = new ApolloServer({
   typeDefs,
   resolvers
 })
-
-const db = require('./config/connection');
-
-// const { Food } = require('./models/Food');
 
 const app = express();
 const PORT = process.env.PORT || 3001;

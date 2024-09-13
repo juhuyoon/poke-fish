@@ -3,22 +3,14 @@ const { Schema, model } = require('mongoose');
 const foodSchema = new Schema(
   {
     name: {
-      type: String,
-      required: true,
-      unique: true
+      type: String
     },
     description: {
-      type: String,
-      required: true,
-    },
-    // price: {
-    //   type: Number,
-    //   required: true
-    // }
+      type: String
+    }
   }
 );
 
-
-const Food = model('Food', foodSchema);
+const Food = model("Food", foodSchema);
 
 module.exports = Food;
