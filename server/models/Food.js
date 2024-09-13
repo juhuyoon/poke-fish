@@ -11,10 +11,10 @@ const foodSchema = new Schema(
       type: String,
       required: true,
     },
-    price: {
-      type: Number,
-      required: true
-    }
+    // price: {
+    //   type: Number,
+    //   required: true
+    // }
   }
 );
 
